@@ -4,10 +4,10 @@ import { PageHero, Pricing, Faq, FinalCta } from "@/components/site/sections";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Websites Starting Under ₹2,000 | GetUrWeb" },
+      { title: "Pricing — Websites Starting Under ₹5,999 | GetUrWeb" },
       { name: "description", content: "Professional websites at affordable starting prices. Get a personalised quote for your business." },
       { property: "og:title", content: "Pricing — GetUrWeb" },
-      { property: "og:description", content: "Professional websites starting under ₹2,000." },
+      { property: "og:description", content: "Professional websites starting under ₹5,999." },
     ],
   }),
   component: () => (

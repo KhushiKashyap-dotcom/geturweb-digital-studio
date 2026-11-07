@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import logoMark from "@/assets/geturweb-logo-mark.png.asset.json";
 
 export const INSTAGRAM_URL = "https://instagram.com/geturweb_";
 
@@ -36,7 +37,9 @@ export function SectionHead({ eyebrow, title, intro, center }: { eyebrow: string
 export function Logo({ light }: { light?: boolean }) {
   return (
     <span className={`flex items-center gap-2 font-display text-xl font-extrabold tracking-tight ${light ? "text-ivory" : "text-primary"}`}>
-      <span className={`grid h-8 w-8 place-items-center rounded-lg text-sm ${light ? "bg-ivory text-primary" : "bg-primary text-primary-foreground"}`}>G</span>
+      <span className={light ? "rounded-lg bg-ivory px-1.5 py-1" : ""}>
+        <img src={logoMark.url} alt="" width={502} height={301} className="h-7 w-auto" />
+      </span>
       <span>GetUr<span className="text-sage">Web</span></span>
     </span>
   );

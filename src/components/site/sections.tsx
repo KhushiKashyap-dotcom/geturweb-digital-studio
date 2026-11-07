@@ -146,7 +146,7 @@ export function Pricing() {
             <h2 className="mt-4 text-3xl font-bold leading-tight text-primary sm:text-4xl">Professional Websites. Affordable Starting Prices.</h2>
             <p className="mt-8 font-display text-5xl font-extrabold tracking-tight text-foreground sm:text-7xl">
               <span className="block text-base font-semibold tracking-normal text-muted-foreground sm:text-lg">Starting under</span>
-              ₹2,000<span className="text-sage">*</span>
+              ₹5,999<span className="text-sage">*</span>
             </p>
           </div>
           <div>
@@ -199,7 +199,7 @@ export function About() {
 }
 
 const faqs = [
-  ["How much does a website cost?", "Our websites start under ₹2,000. The final price depends on the number of pages, features and what your project needs — we'll give you a clear quote before any work begins."],
+  ["How much does a website cost?", "Our websites start under ₹5,999. The final price depends on the number of pages, features and what your project needs — we'll give you a clear quote before any work begins."],
   ["Can I get a website within my budget?", "Very likely. Share your budget and goals with us and we'll suggest what's realistic, keeping the focus on what matters most for your business."],
   ["Will my website work on mobile phones?", "Yes. Every website we build is designed mobile-first and tested to work well on phones, tablets and desktops."],
   ["Can you design a website for my café or small business?", "Absolutely. Restaurants, cafés and small businesses are a core focus — menus, photos, location and contact details included as needed."],
