@@ -1,23 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero, Intro, Services, WhyUs, Process, Pricing, Showcase, About, Faq, FinalCta } from "@/components/site/sections";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "GetUrWeb — Affordable, Professional Websites for Businesses" },
+      { name: "description", content: "Modern, responsive business websites from under ₹2,000. Websites for cafés, small businesses, portfolios and landing pages." },
+      { property: "og:title", content: "GetUrWeb — Your Business. Your Website." },
+      { property: "og:description", content: "Modern, responsive business websites at affordable starting prices." },
+    ],
+  }),
+  component: () => (
+    <>
+      <Hero /><Intro /><Services /><WhyUs /><Process /><Pricing /><Showcase /><About /><Faq /><FinalCta />
+    </>
+  ),
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
