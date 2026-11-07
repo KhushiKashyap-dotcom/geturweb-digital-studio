@@ -4,7 +4,7 @@ import logoMark from "@/assets/geturweb-logo-mark.png.asset.json";
 
 export const INSTAGRAM_URL = "https://instagram.com/geturweb_";
 
-type BtnProps = { to: "/" | "/services" | "/process" | "/pricing" | "/about" | "/contact"; children: ReactNode; variant?: "primary" | "outline" | "ivory" };
+type BtnProps = { to: "/" | "/services" | "/process" | "/pricing" | "/contact"; children: ReactNode; variant?: "primary" | "outline" | "ivory" };
 
 const styles = {
   primary: "bg-primary text-primary-foreground hover:bg-forest-deep shadow-soft",

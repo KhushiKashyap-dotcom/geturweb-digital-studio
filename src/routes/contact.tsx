@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Faq } from "@/components/site/sections";
 import { INSTAGRAM_URL } from "@/components/site/ui";
+import { ContactForm } from "@/components/site/ContactForm";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -18,6 +19,7 @@ function Contact() {
   return (
     <>
       <PageHero eyebrow="Contact" title="Let's build your website." intro="Tell us a little about your business and what you need. We'll reply with next steps and a personalised quote." />
+      <section className="mx-auto max-w-4xl px-5 py-12 sm:px-8"><ContactForm /></section>
       <section className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
         <div className="grid gap-8 rounded-[2rem] bg-primary p-8 text-primary-foreground sm:p-14 lg:grid-cols-[1.3fr_1fr] lg:items-center">
           <div>
