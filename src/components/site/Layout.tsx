@@ -24,15 +24,15 @@ export function Header() {
     <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled || open ? "border-b border-border bg-background/90 backdrop-blur-md" : "border-b border-transparent"}`}>
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
         <Link to="/" aria-label="GetUrWeb home" onClick={() => setOpen(false)}><Logo /></Link>
-        <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label="Main" className="hidden items-center gap-5 md:flex lg:gap-7">
           {nav.map((n) => (
             <Link key={n.to} to={n.to} activeOptions={{ exact: true }} className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary data-[status=active]:text-primary">
               {n.label}
             </Link>
           ))}
         </nav>
-        <div className="hidden lg:block"><Btn to="/contact">Let's Build Your Website</Btn></div>
-        <button className="grid h-10 w-10 place-items-center rounded-full border border-border lg:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
+        <div className="hidden xl:block"><Btn to="/contact">Let's Build Your Website</Btn></div>
+        <button className="grid h-10 w-10 place-items-center rounded-full border border-border md:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
           <span className="relative block h-3 w-4">
             <span className={`absolute left-0 h-0.5 w-4 bg-primary transition-all ${open ? "top-1.5 rotate-45" : "top-0"}`} />
             <span className={`absolute left-0 h-0.5 w-4 bg-primary transition-all ${open ? "top-1.5 -rotate-45" : "top-2.5"}`} />
@@ -40,7 +40,7 @@ export function Header() {
         </button>
       </div>
       {open && (
-        <nav aria-label="Mobile" className="fade-up border-t border-border px-5 pb-8 pt-4 lg:hidden">
+        <nav aria-label="Mobile" className="fade-up border-t border-border px-5 pb-8 pt-4 md:hidden">
           {nav.map((n) => (
             <Link key={n.to} to={n.to} onClick={() => setOpen(false)} activeOptions={{ exact: true }} className="block border-b border-border py-4 font-display text-2xl font-bold text-primary data-[status=active]:text-sage">
               {n.label}
