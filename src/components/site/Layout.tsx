@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Btn, Logo, INSTAGRAM_URL } from "./ui";
+import { Btn, Logo, INSTAGRAM_URL, EMAIL } from "./ui";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -72,7 +72,8 @@ export function Footer() {
           <ul className="mt-4 space-y-2.5 text-ivory/75">
             {["Business Websites", "Restaurant & Café Websites", "Landing Pages", "Portfolio Websites"].map((s) => <li key={s}><Link to="/services" className="hover:text-ivory">{s}</Link></li>)}
           </ul>
-          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="mt-6 inline-flex rounded-full border border-ivory/30 px-4 py-2 text-sm font-semibold hover:bg-ivory hover:text-primary">Instagram · @geturweb_</a>
+          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="mt-6 inline-flex rounded-full border border-ivory/30 px-4 py-2 text-sm font-semibold hover:bg-ivory hover:text-primary">Visit Instagram Page</a>
+          <a href={`mailto:${EMAIL}`} className="mt-4 block text-sm text-ivory/75 hover:text-ivory">{EMAIL}</a>
         </div>
       </div>
       <div className="border-t border-ivory/10 py-6 text-center text-xs text-ivory/50">© {new Date().getFullYear()} GetUrWeb. All rights reserved.</div>

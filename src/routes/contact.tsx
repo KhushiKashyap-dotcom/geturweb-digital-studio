@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Faq } from "@/components/site/sections";
-import { INSTAGRAM_URL } from "@/components/site/ui";
+import { INSTAGRAM_URL, EMAIL } from "@/components/site/ui";
 import { ContactForm } from "@/components/site/ContactForm";
 
 export const Route = createFileRoute("/contact")({
@@ -19,7 +19,13 @@ function Contact() {
   return (
     <>
       <PageHero eyebrow="Contact" title="Let's build your website." intro="Tell us a little about your business and what you need. We'll reply with next steps and a personalised quote." />
-      <section className="mx-auto max-w-4xl px-5 py-12 sm:px-8"><ContactForm /></section>
+      <section className="mx-auto max-w-4xl px-5 py-12 sm:px-8">
+        <ContactForm />
+        <p className="mt-6 text-center text-muted-foreground">
+          Prefer email? Write to us at{" "}
+          <a href={`mailto:${EMAIL}`} className="font-semibold text-primary underline underline-offset-4 hover:text-sage">{EMAIL}</a>
+        </p>
+      </section>
       <section className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
         <div className="grid gap-8 rounded-[2rem] bg-primary p-8 text-primary-foreground sm:p-14 lg:grid-cols-[1.3fr_1fr] lg:items-center">
           <div>
@@ -32,7 +38,7 @@ function Contact() {
             </ul>
           </div>
           <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-ivory px-8 py-4 font-semibold text-primary transition-colors hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-primary">
-            Send a message on Instagram →
+            Visit Instagram Page →
           </a>
         </div>
       </section>

@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import logoMark from "@/assets/geturweb-logo-mark.png.asset.json";
 
 export const INSTAGRAM_URL = "https://instagram.com/geturweb_";
+export const EMAIL = "info@geturweb.us.ci";
 
 type BtnProps = { to: "/" | "/services" | "/process" | "/pricing" | "/contact"; children: ReactNode; variant?: "primary" | "outline" | "ivory" };
 
